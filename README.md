@@ -1,70 +1,95 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🔤 Word Scramble Game
 
-## Available Scripts
+A fun, interactive React-based word scramble game where players guess the correct word from a scrambled version. Features hint support, scoring, timer, and adaptive difficulty.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🎮 How to Play
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. A scrambled word is displayed on the screen.
+2. Enter your guess in the input field.
+3. Press **Submit** to check your answer.
+4. If correct:
+   - You earn **+10 points**.
+   - A new scrambled word appears.
+   - Difficulty increases every 5 correct guesses.
+5. If wrong:
+   - Try again until the timer runs out.
+6. Click **💡 Show Hint** to get a clue.
+7. If the timer hits **0**, the correct word is shown and the next word is loaded.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ Randomly scrambled word display
+- ✅ User input validation
+- ✅ Feedback messages (Correct / Try Again / Time’s Up)
+- ✅ Hint system for each word
+- ✅ Score tracking (+10 per correct guess)
+- ✅ Adaptive difficulty:
+  - Easy: 4–6 letter words
+  - Medium: 7–8 letters (after 5 correct answers)
+  - Hard: 9+ letters (after 10 correct answers)
+- ✅ Countdown timer (30s per word)
+- ❌ No repeated words
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧰 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React (JavaScript)
+- Custom CSS for layout (minimal)
+- State management with `useState` and `useEffect`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── App.js
+├── data/
+│   └── words.js         # Word list with hints
+├── utils/
+│   └── scramble.js      # Scramble function
+└── components/          # (if split into smaller parts)
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/your-username/word-scramble-game.git
+cd word-scramble-game
+npm install
+npm start
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧪 Git Strategy (Recommended)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Use `main` for stable version
+- Create feature branches:
+  - `ft-timer`
+  - `ft-score-tracker`
+  - `ft-difficulty-scaling`
+  - `ft-hint-system`
+  - `fix-input-validation`
 
-### Code Splitting
+Commit each feature with clear messages for easy tracking.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+MIT
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🙌 Acknowledgments
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by Mtsumi as a fun coding challenge.
